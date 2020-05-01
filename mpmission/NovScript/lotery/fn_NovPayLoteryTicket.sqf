@@ -13,6 +13,8 @@
 
 private["_ticketValue","_jackpotMin","_jackpotAdd","_arrayToGive","_enabledLimit","_loteryLimit","_value1","_value2","_value3","_value4","_value5","_value6","_value7","_random1","_random2","_random3","_random4","_random5","_random6","_random7"];  //Variable stay in this file
 
+_arrayToGive = [];
+
 _value1 = parseNumber(ctrlText 690212);
 _value2 = parseNumber(ctrlText 690213);
 _value3 = parseNumber(ctrlText 690214);

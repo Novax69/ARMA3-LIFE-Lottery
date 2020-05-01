@@ -16,7 +16,7 @@ private["_mode","_arrayAnswer","_ticketAmmount"];
 _ticketAmmount = LIFE_SETTING(getNumber,"nov_loteryTicket");
 
 _mode = _this select 0;
-
+_arrayAnswer = _this select 1;
 
 if (!dialog) then {
     if (!(createDialog "Life_lotery_management")) exitWith {};  //Create the GUI menu
@@ -37,7 +37,7 @@ switch(_mode) do {
 	};
 
 	case 1:{
-		_arrayAnswer = _this select 1;
+
 		CONTROL(690200,690205) ctrlSetStructuredText parseText format ["%1", _arrayAnswer select 0];  
 		CONTROL(690200,690206) ctrlSetStructuredText parseText format ["%1", _arrayAnswer select 1]; 
 		CONTROL(690200,690207) ctrlSetStructuredText parseText format ["%1", _arrayAnswer select 2]; 

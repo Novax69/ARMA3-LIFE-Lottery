@@ -31,19 +31,19 @@ if(_ticketValue > BANK) exitWith {hint "Tu n'as pas assez d'argent"}; //Check if
 BANK = BANK - _ticketValue; // Money is taken from the bank account
 
 hint format["Tu as payé un ticket %1€",[_ticketValue] call life_fnc_numberText]; // You bought it !
-_random1 = random 49;
+_random1 = round(random 49);
 _arrayToGive set[0,_random1];
-_random2 = random 49;
+_random2 = round(random 49);
 _arrayToGive set[1,_random2];
-_random3 = random 49;
+_random3 = round(random 49);
 _arrayToGive set[2,_random3];
-_random4 = random 49;
+_random4 = round(random 49);
 _arrayToGive set[3,_random4];
-_random5 = random 49;
+_random5 = round(random 49);
 _arrayToGive set[4,_random5];
-_random6 = random 49;
+_random6 = round(random 49);
 _arrayToGive set[5,_random6];
-_random7 = random 49;
+_random7 = round(random 49);
 _arrayToGive set[6,_random7];
 
 if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 isEqualTo _value3) AND (_random4 isEqualTo _value4) AND (_random5 isEqualTo _value5) AND (_random6 isEqualTo _value6) AND (_random7 isEqualTo _value7)) then {

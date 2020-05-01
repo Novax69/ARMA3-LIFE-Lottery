@@ -1,3 +1,2 @@
 // Add 
-#include "loan.hpp"
-#include "livretA.hpp"
+#include "lotery.hpp"

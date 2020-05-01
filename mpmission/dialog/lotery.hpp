@@ -54,7 +54,6 @@ class Life_lotery_management {
 			y = 0.332 * safezoneH + safezoneY;
 			w = 0.170625 * safezoneW;
 			h = 0.028 * safezoneH;
-			colorText[] = {0,0,0,1};
             colorBackground[] = {"(profilenamespace getvariable ['GUI_BCG_RGB_R',0.3843])", "(profilenamespace getvariable ['GUI_BCG_RGB_G',0.7019])", "(profilenamespace getvariable ['GUI_BCG_RGB_B',0.8862])", "(profilenamespace getvariable ['GUI_BCG_RGB_A',0.7])"};
 
 		};

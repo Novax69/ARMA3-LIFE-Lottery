@@ -212,6 +212,7 @@ class Life_lotery_management {
 		{
 			idc = 690220;
 			text = "Payer le ticket !"; //--- ToDo: Localize;
+            onButtonClick = "closeDialog 0;";
 			x = 0.499999 * safezoneW + safezoneX;
 			y = 0.612 * safezoneH + safezoneY;
 			w = 0.164062 * safezoneW;

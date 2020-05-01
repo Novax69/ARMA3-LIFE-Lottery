@@ -79,3 +79,5 @@ if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 i
 [1,_arrayToGive] call life_fnc_NovLoteryMenu; // Call the menu made for the Lotery // TO EDIT
 
 [6] call SOCK_fnc_updatePartial; //Silent Sync => Update players data in DB
+
+

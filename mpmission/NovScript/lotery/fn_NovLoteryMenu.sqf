@@ -11,7 +11,9 @@
 */
 disableSerialization; //Always needed for the GUI (better)
 
-private["_mode","_arrayAnswer"];
+private["_mode","_arrayAnswer","_ticketAmmount"];
+
+_ticketAmmount = LIFE_SETTING(getNumber,"nov_loteryTicket");
 
 _mode = _this select 0;
 
@@ -47,4 +49,4 @@ switch(_mode) do {
 };
 
 
-CONTROL(690200,690219) ctrlSetStructuredText parseText format["Le prix du ticket est à %1€ \n Le jackpot est de %2€ \n Chiffres entre 0 et 49 inclus",[_ticketAmmount] call life_fnc_numberText,[JACKPOT] call life_fnc_numberText];
+CONTROL(690200,690219) ctrlSetStructuredText parseText format["Le prix du ticket est à %1€ <br/> Le jackpot est de %2€ <br/> Chiffres entre 0 et 49 inclus",[_ticketAmmount] call life_fnc_numberText,[JACKPOT] call life_fnc_numberText];

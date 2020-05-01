@@ -4,6 +4,7 @@ Add a Lotery system for arma 3 ! Try your luck :P
 ### Credits :
 **Author :** Novax
 
+**Made With :** MysterFlyp
 
 
 ### Support :

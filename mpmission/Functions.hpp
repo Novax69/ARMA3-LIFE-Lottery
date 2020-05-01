@@ -6,7 +6,7 @@ class Life_Client_Core {
     //Add inside this class Here
     class NovScriptLotery {
         file = "NovScript\lotery";
-        class NovLoteryMeny {};
+        class NovLoteryMenu {};
         class NovPayLoteryTicket {};
 
     };

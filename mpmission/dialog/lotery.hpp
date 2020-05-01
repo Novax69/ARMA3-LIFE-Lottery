@@ -73,7 +73,7 @@ class Life_lotery_management {
 		class nb1: Life_RscStructuredText
 		{
 			idc = 690205;
-			text = "1"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.31625 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;
@@ -82,7 +82,7 @@ class Life_lotery_management {
 		class nb2: Life_RscStructuredText
 		{
 			idc = 690206;
-			text = "2"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.36875 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;
@@ -91,7 +91,7 @@ class Life_lotery_management {
 		class nb3: Life_RscStructuredText
 		{
 			idc = 690207;
-			text = "3"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.42125 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;
@@ -100,7 +100,7 @@ class Life_lotery_management {
 		class nb4: Life_RscStructuredText
 		{
 			idc = 690208;
-			text = "4"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.47375 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;
@@ -109,7 +109,7 @@ class Life_lotery_management {
 		class nb5: Life_RscStructuredText
 		{
 			idc = 690209;
-			text = "5"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.52625 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;
@@ -118,7 +118,7 @@ class Life_lotery_management {
 		class nb6: Life_RscStructuredText
 		{
 			idc = 690210;
-			text = "6"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.57875 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;
@@ -127,7 +127,7 @@ class Life_lotery_management {
 		class nb7: Life_RscStructuredText
 		{
 			idc = 690211;
-			text = "7"; //--- ToDo: Localize;
+			text = "X"; //--- ToDo: Localize;
 			x = 0.63125 * safezoneW + safezoneX;
 			y = 0.472 * safezoneH + safezoneY;
 			w = 0.0328125 * safezoneW;

@@ -1,0 +1,47 @@
+<!--
+    If Someone know the other language you cant create an issue on github :)
+--> 
+        <Key ID="STR_NOV_lottery_NotEnoughCash">
+            <Original>You don't have enough cash to buy a lottery ticket</Original>
+            <Czech>TO EDIT => Lottery</Czech>
+            <Spanish>TO EDIT => Lottery</Spanish>
+            <Russian>TO EDIT => Lottery</Russian>
+            <German>TO EDIT => Lottery</German>
+            <French>Tu n'as pas assez d'argent pour acheter un ticket de loterie</French>
+            <Italian>TO EDIT => Lottery</Italian>
+            <Portuguese>TO EDIT => Lottery</Portuguese>
+            <Polish>TO EDIT => Lottery</Polish>
+        </Key>
+        <Key ID="STR_NOV_lottery_TicketBought">
+            <Original>You bought a lottery Ticket for %1$!</Original>
+            <Czech>TO EDIT => Lottery</Czech>
+            <Spanish>TO EDIT => Lottery</Spanish>
+            <Russian>TO EDIT => Lottery</Russian>
+            <German>TO EDIT => Lottery</German>
+            <French>Tu as acheté un ticket de loterie %1€</French>
+            <Italian>TO EDIT => Lottery</Italian>
+            <Portuguese>TO EDIT => Lottery</Portuguese>
+            <Polish>TO EDIT => Lottery</Polish>
+        </Key>
+        <Key ID="STR_NOV_lottery_Jackpot">
+            <Original>Jackpot! You won %1$</Original>
+            <Czech>TO EDIT => Lottery</Czech>
+            <Spanish>TO EDIT => Lottery</Spanish>
+            <Russian>TO EDIT => Lottery</Russian>
+            <German>TO EDIT => Lottery</German>
+            <French>Jackpot ! tu as gagné %1€</French>
+            <Italian>TO EDIT => Lottery</Italian>
+            <Portuguese>TO EDIT => Lottery</Portuguese>
+            <Polish>TO EDIT => Lottery</Polish>
+        </Key>
+        <Key ID="STR_NOV_lottery_Info">
+            <Original>Ticket Price is %1$ \n Jackpot : %2$ \n Number between 0 and 49 included</Original>
+            <Czech>TO EDIT => Lottery</Czech>
+            <Spanish>TO EDIT => Lottery</Spanish>
+            <Russian>TO EDIT => Lottery</Russian>
+            <German>TO EDIT => Lottery</German>
+            <French>Le prix du ticket est à %1€ \n Le jackpot est de %2€\n Chiffres entre 0 et 49 inclus</French>
+            <Italian>TO EDIT => Lottery</Italian>
+            <Portuguese>TO EDIT => Lottery</Portuguese>
+            <Polish>TO EDIT => Lottery</Polish>
+        </Key>

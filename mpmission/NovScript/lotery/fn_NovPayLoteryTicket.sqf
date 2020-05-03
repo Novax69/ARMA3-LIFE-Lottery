@@ -23,14 +23,14 @@ _value5 = parseNumber(ctrlText 690216);
 _value6 = parseNumber(ctrlText 690217);
 _value7 = parseNumber(ctrlText 690218);
 
-_ticketValue = LIFE_SETTINGS(getNumber,"nov_loteryTicket"); // Ticket Value defined in Config_Master.hpp
+_ticketValue = LIFE_SETTINGS(getNumber,"nov_loteryTicket");
 
-if(_ticketValue > BANK) exitWith {hint "Tu n'as pas assez d'argent"}; //Check if he has enough Cash in BANK to buy a ticket
+if(_ticketValue > BANK) exitWith {hint localize "STR_NOV_lotery_NotEnoughCash"}; 
 
 
-BANK = BANK - _ticketValue; // Money is taken from the bank account
+BANK = BANK - _ticketValue; 
 
-hint format["Tu as payé un ticket %1€",[_ticketValue] call life_fnc_numberText]; // You bought it !
+hint format[localize "STR_NOV_lottery_TicketBought",[_ticketValue] call life_fnc_numberText]; 
 _random1 = round(random 49);
 _arrayToGive set[0,_random1];
 _random2 = round(random 49);
@@ -48,18 +48,18 @@ _arrayToGive set[6,_random7];
 
 if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 isEqualTo _value3) AND (_random4 isEqualTo _value4) AND (_random5 isEqualTo _value5) AND (_random6 isEqualTo _value6) AND (_random7 isEqualTo _value7)) then {
 	BANK = BANK + JACKPOT;
-	hint format ["Tu as touché le jackpot de %1€",[JACKPOT] call life_fnc_numberText];
+	hint format [localize "STR_NOV_lottery_Jackpot",[JACKPOT] call life_fnc_numberText];
 	_jackpotMin = LIFE_SETTINGS(getNumber,"nov_jackpotMin");
 	JACKPOT = _jackpotMin;
 
 
-	publicVariable "life_jackpot"; //Change the variable for every Computer
+	publicVariable "life_jackpot"; 
 
 
 } else {
 	_jackpotAdd = LIFE_SETTINGS(getNumber,"nov_jackpotAdd");
-	_enabledLimit = LIFE_SETTINGS(getNumber,"nov_enableLimit"); // False by default
-	_loteryLimit = LIFE_SETTINGS(getNumber,"nov_jackpotLimit"); // 20 Million by default
+	_enabledLimit = LIFE_SETTINGS(getNumber,"nov_enableLimit"); 
+	_loteryLimit = LIFE_SETTINGS(getNumber,"nov_jackpotLimit"); 
 
 	if(_enabledLimit isEqualTo 1) then {
 		if(JACKPOT + _jackpotAdd > _loteryLimit) then {
@@ -75,11 +75,11 @@ if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 i
 };
 
 
-[JACKPOT] remoteExecCall ["DB_fnc_updateLotery",RSERV]; // Not functional yet
+[JACKPOT] remoteExecCall ["DB_fnc_updateLotery",RSERV]; 
 
 
-[1,_arrayToGive] call life_fnc_NovLoteryMenu; // Call the menu made for the Lotery // TO EDIT
+[1,_arrayToGive] call life_fnc_NovLoteryMenu; 
 
-[6] call SOCK_fnc_updatePartial; //Silent Sync => Update players data in DB
+[6] call SOCK_fnc_updatePartial;
 
 

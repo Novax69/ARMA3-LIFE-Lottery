@@ -49,4 +49,4 @@ switch(_mode) do {
 };
 
 
-CONTROL(690200,690219) ctrlSetStructuredText parseText format["Le prix du ticket est à %1€ <br/> Le jackpot est de %2€ <br/> Chiffres entre 0 et 49 inclus",[_ticketAmmount] call life_fnc_numberText,[JACKPOT] call life_fnc_numberText];
+CONTROL(690200,690219) ctrlSetStructuredText parseText format[localize "STR_NOV_lottery_Info",[_ticketAmmount] call life_fnc_numberText,[JACKPOT] call life_fnc_numberText];

@@ -13,7 +13,7 @@ disableSerialization; //Always needed for the GUI (better)
 
 private["_mode","_arrayAnswer","_ticketAmmount"];
 
-_ticketAmmount = LIFE_SETTING(getNumber,"nov_loteryTicket");
+_ticketAmmount = LIFE_SETTINGS(getNumber,"nov_loteryTicket");
 
 _mode = _this select 0;
 _arrayAnswer = _this select 1;

@@ -23,7 +23,7 @@ _value5 = parseNumber(ctrlText 690216);
 _value6 = parseNumber(ctrlText 690217);
 _value7 = parseNumber(ctrlText 690218);
 
-_ticketValue = LIFE_SETTINGS(getNumber,"nov_loteryTicket");
+_ticketValue = NOV_PARAMS(getNumber,"nov_loteryTicket");
 
 if(_ticketValue > BANK) exitWith {hint localize "STR_NOV_lotery_NotEnoughCash"}; 
 
@@ -76,7 +76,7 @@ _arrayToGive set[6,_random7];
 if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 isEqualTo _value3) AND (_random4 isEqualTo _value4) AND (_random5 isEqualTo _value5) AND (_random6 isEqualTo _value6) AND (_random7 isEqualTo _value7)) then {
 	BANK = BANK + JACKPOT;
 	hint format [localize "STR_NOV_lottery_Jackpot",[JACKPOT] call life_fnc_numberText];
-	_jackpotMin = LIFE_SETTINGS(getNumber,"nov_jackpotMin");
+	_jackpotMin = NOV_PARAMS(getNumber,"nov_jackpotMin");
 	JACKPOT = _jackpotMin;
 
 
@@ -84,9 +84,9 @@ if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 i
 
 
 } else {
-	_jackpotAdd = LIFE_SETTINGS(getNumber,"nov_jackpotAdd");
-	_enabledLimit = LIFE_SETTINGS(getNumber,"nov_enableLimit"); 
-	_loteryLimit = LIFE_SETTINGS(getNumber,"nov_jackpotLimit"); 
+	_jackpotAdd = NOV_PARAMS(getNumber,"nov_jackpotAdd");
+	_enabledLimit = NOV_PARAMS(getNumber,"nov_enableLimit"); 
+	_loteryLimit = NOV_PARAMS(getNumber,"nov_jackpotLimit"); 
 
 	if(_enabledLimit isEqualTo 1) then {
 		if(JACKPOT + _jackpotAdd > _loteryLimit) then {

@@ -13,7 +13,7 @@ disableSerialization; //Always needed for the GUI (better)
 
 private["_mode","_arrayAnswer","_ticketAmmount"];
 
-_ticketAmmount = LIFE_SETTINGS(getNumber,"nov_loteryTicket");
+_ticketAmmount = NOV_PARAMS(getNumber,"nov_loteryTicket");
 _maxValue = NOV_PARAMS(getNumber,"nov_maxValuePossible");
 
 _mode = _this select 0;

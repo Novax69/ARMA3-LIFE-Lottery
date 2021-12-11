@@ -11,7 +11,7 @@
 */
 
 
-private["_ticketValue","_jackpotMin","_jackpotAdd","_arrayToGive","_enabledLimit","_loteryLimit","_value1","_value2","_value3","_value4","_value5","_value6","_value7","_random1","_random2","_random3","_random4","_random5","_random6","_random7"];  //Variable stay in this file
+private["_maxValue","_ticketValue","_jackpotMin","_jackpotAdd","_arrayToGive","_enabledLimit","_loteryLimit","_value1","_value2","_value3","_value4","_value5","_value6","_value7","_random1","_random2","_random3","_random4","_random5","_random6","_random7"];  //Variable stay in this file
 
 _arrayToGive = [];
 
@@ -31,20 +31,47 @@ if(_ticketValue > BANK) exitWith {hint localize "STR_NOV_lotery_NotEnoughCash"};
 BANK = BANK - _ticketValue; 
 
 hint format[localize "STR_NOV_lottery_TicketBought",[_ticketValue] call life_fnc_numberText]; 
-_random1 = round(random 49);
+
+_random1 = round(random _maxValue);
+
+_random2 = round(random _maxValue);
+while {_random2 isEqualTo _random1} do {
+	_random2 = round(random _maxValue);
+};
+
+_random3 = round(random _maxValue);
+while{_random3 isEqualTo _random1} do {
+	_random3 = round(random _maxValue);
+};
+
+_random4 = round(random _maxValue);
+while{(_random4 isEqualTo _random3) OR (_random4 isEqualTo _random2) OR (_random4 isEqualTo _random1)} do {
+	_random4 = round(random _maxValue);
+};
+
+_random5 = round(random _maxValue);
+while{(_random5 isEqualTo _random3) OR (_random5 isEqualTo _random1)} do {
+	_random5 = round(random _maxValue);
+};
+
+_random6 = round(random _maxValue);
+while{(_random6 isEqualTo _random5) OR (_random6 isEqualTo _random4) OR (_random6 isEqualTo _random3) OR (_random6 isEqualTo _random2) OR (_random6 isEqualTo _random1)} do {
+	_random6 = round(random _maxValue);
+};
+
+_random7 = round(random _maxValue);
+while{(_random7 isEqualTo _random5) OR (_random7 isEqualTo _random3) OR (_random7 isEqualTo _random1)} do {
+	_random7 = round(random _maxValue);
+};
+
 _arrayToGive set[0,_random1];
-_random2 = round(random 49);
 _arrayToGive set[1,_random2];
-_random3 = round(random 49);
 _arrayToGive set[2,_random3];
-_random4 = round(random 49);
 _arrayToGive set[3,_random4];
-_random5 = round(random 49);
 _arrayToGive set[4,_random5];
-_random6 = round(random 49);
 _arrayToGive set[5,_random6];
-_random7 = round(random 49);
 _arrayToGive set[6,_random7];
+
 
 if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 isEqualTo _value3) AND (_random4 isEqualTo _value4) AND (_random5 isEqualTo _value5) AND (_random6 isEqualTo _value6) AND (_random7 isEqualTo _value7)) then {
 	BANK = BANK + JACKPOT;

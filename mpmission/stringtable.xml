@@ -35,12 +35,12 @@
             <Polish>TO EDIT => Lottery</Polish>
         </Key>
         <Key ID="STR_NOV_lottery_Info">
-            <Original>Ticket Price is %1$ \n Jackpot : %2$ \n Number between 0 and 49 included</Original>
+            <Original>Ticket Price is %1$ \n Jackpot : %2$ \n Number between 0 and %3 included</Original>
             <Czech>TO EDIT => Lottery</Czech>
             <Spanish>TO EDIT => Lottery</Spanish>
             <Russian>TO EDIT => Lottery</Russian>
             <German>TO EDIT => Lottery</German>
-            <French>Le prix du ticket est à %1€ \n Le jackpot est de %2€\n Chiffres entre 0 et 49 inclus</French>
+            <French>Le prix du ticket est à %1€ \n Le jackpot est de %2€\n Chiffres entre 0 et %3 inclus</French>
             <Italian>TO EDIT => Lottery</Italian>
             <Portuguese>TO EDIT => Lottery</Portuguese>
             <Polish>TO EDIT => Lottery</Polish>

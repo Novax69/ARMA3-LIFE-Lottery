@@ -14,6 +14,7 @@ disableSerialization; //Always needed for the GUI (better)
 private["_mode","_arrayAnswer","_ticketAmmount"];
 
 _ticketAmmount = LIFE_SETTINGS(getNumber,"nov_loteryTicket");
+_maxValue = NOV_PARAMS(getNumber,"nov_maxValuePossible");
 
 _mode = _this select 0;
 _arrayAnswer = _this select 1;
@@ -49,4 +50,4 @@ switch(_mode) do {
 };
 
 
-CONTROL(690200,690219) ctrlSetStructuredText parseText format[localize "STR_NOV_lottery_Info",[_ticketAmmount] call life_fnc_numberText,[JACKPOT] call life_fnc_numberText];
+CONTROL(690200,690219) ctrlSetStructuredText parseText format[localize "STR_NOV_lottery_Info",[_ticketAmmount] call life_fnc_numberText,[JACKPOT] call life_fnc_numberText, (_maxValue) call life_fnc_numberText];

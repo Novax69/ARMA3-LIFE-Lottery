@@ -105,7 +105,7 @@ if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 i
 [JACKPOT] remoteExecCall ["DB_fnc_updateLotery",RSERV]; 
 
 
-[1,_arrayToGive] call life_fnc_NovLoteryMenu; 
+[1,_arrayToGive] call nov_fnc_NovLoteryMenu; 
 
 [6] call SOCK_fnc_updatePartial;
 

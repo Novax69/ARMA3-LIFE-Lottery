@@ -10,7 +10,6 @@
 
 */
 
-
 private["_maxValue","_ticketValue","_jackpotMin","_jackpotAdd","_arrayToGive","_enabledLimit","_loteryLimit","_value1","_value2","_value3","_value4","_value5","_value6","_value7","_random1","_random2","_random3","_random4","_random5","_random6","_random7"];  //Variable stay in this file
 
 _arrayToGive = [];
@@ -24,9 +23,9 @@ _value6 = parseNumber(ctrlText 690217);
 _value7 = parseNumber(ctrlText 690218);
 
 _ticketValue = NOV_PARAMS(getNumber,"nov_loteryTicket");
+_maxValue = NOV_PARAMS(getNumber,"nov_maxValuePossible");
 
 if(_ticketValue > BANK) exitWith {hint localize "STR_NOV_lotery_NotEnoughCash"}; 
-
 
 BANK = BANK - _ticketValue; 
 
@@ -72,16 +71,13 @@ _arrayToGive set[4,_random5];
 _arrayToGive set[5,_random6];
 _arrayToGive set[6,_random7];
 
-
 if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 isEqualTo _value3) AND (_random4 isEqualTo _value4) AND (_random5 isEqualTo _value5) AND (_random6 isEqualTo _value6) AND (_random7 isEqualTo _value7)) then {
 	BANK = BANK + JACKPOT;
 	hint format [localize "STR_NOV_lottery_Jackpot",[JACKPOT] call life_fnc_numberText];
 	_jackpotMin = NOV_PARAMS(getNumber,"nov_jackpotMin");
 	JACKPOT = _jackpotMin;
 
-
 	publicVariable "life_jackpot"; 
-
 
 } else {
 	_jackpotAdd = NOV_PARAMS(getNumber,"nov_jackpotAdd");
@@ -101,9 +97,7 @@ if((_random1 isEqualTo _value1) AND (_random2 isEqualTo _value2) AND (_random3 i
 
 };
 
-
 [JACKPOT] remoteExecCall ["DB_fnc_updateLotery",RSERV]; 
-
 
 [1,_arrayToGive] call nov_fnc_NovLoteryMenu; 
 
